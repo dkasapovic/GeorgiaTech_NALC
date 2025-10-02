@@ -1,0 +1,89 @@
+{
+  "count": 6,
+  "entries": [
+    {
+      "http.http_method": "PUT",
+      "http.url": "wp-content",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "desktop-02.hayes-bauer.wilson.net",
+      "src_ip": "10.10.0.54",
+      "src_port": 60362,
+      "event_type": "http",
+      "timestamp": "2025-09-17T06:01:49",
+      "dest_ip": "202.145.136.74",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 5.01; Trident/3.0)"
+    },
+    {
+      "http.http_method": "GET",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.0.54",
+      "src_port": 54251,
+      "event_type": "http",
+      "timestamp": "2025-09-18T09:30:23",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 5.01; Trident/3.0)"
+    },
+    {
+      "http.http_method": "POST",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.0.54",
+      "src_port": 63821,
+      "event_type": "http",
+      "timestamp": "2025-09-18T09:30:47",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 5.01; Trident/3.0)"
+    },
+    {
+      "http.http_method": "PUT",
+      "http.url": "tag/categories/wp-content",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "email-79.wolfe.com",
+      "src_ip": "10.10.0.54",
+      "src_port": 55213,
+      "event_type": "http",
+      "timestamp": "2025-09-21T23:55:49",
+      "dest_ip": "205.35.51.97",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 5.01; Trident/3.0)"
+    },
+    {
+      "http.http_method": "HEAD",
+      "http.url": "main/tags/search",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-08.williams-rodgers.com",
+      "src_ip": "10.10.0.54",
+      "src_port": 59761,
+      "event_type": "http",
+      "timestamp": "2025-09-22T11:49:49",
+      "dest_ip": "15.43.75.168",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 5.01; Trident/3.0)"
+    },
+    {
+      "http.http_method": "DELETE",
+      "http.url": "blog/blog",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "laptop-94.johnson.com",
+      "src_ip": "10.10.0.54",
+      "src_port": 60051,
+      "event_type": "http",
+      "timestamp": "2025-09-22T18:40:49",
+      "dest_ip": "146.50.183.176",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 5.01; Trident/3.0)"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "count": 6,
+  "entries": [
+    {
+      "http.http_method": "GET",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.0.196",
+      "src_port": 65387,
+      "event_type": "http",
+      "timestamp": "2025-09-18T09:02:03",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows CE; Trident/3.1)"
+    },
+    {
+      "http.http_method": "POST",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.0.196",
+      "src_port": 57924,
+      "event_type": "http",
+      "timestamp": "2025-09-18T09:02:16",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows CE; Trident/3.1)"
+    },
+    {
+      "http.http_method": "DELETE",
+      "http.url": "tags/app",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "laptop-72.walls.com",
+      "src_ip": "10.10.0.196",
+      "src_port": 60646,
+      "event_type": "http",
+      "timestamp": "2025-09-19T03:36:49",
+      "dest_ip": "109.221.98.211",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows CE; Trident/3.1)"
+    },
+    {
+      "http.http_method": "OPTIONS",
+      "http.url": "categories/explore/tag",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "db-01.moore-ramsey.kelly.com",
+      "src_ip": "10.10.0.196",
+      "src_port": 64597,
+      "event_type": "http",
+      "timestamp": "2025-09-21T13:55:49",
+      "dest_ip": "176.25.241.204",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows CE; Trident/3.1)"
+    },
+    {
+      "http.http_method": "PUT",
+      "http.url": "tags",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "db-35.sanchez.com",
+      "src_ip": "10.10.0.196",
+      "src_port": 62773,
+      "event_type": "http",
+      "timestamp": "2025-09-21T21:11:49",
+      "dest_ip": "166.118.228.109",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows CE; Trident/3.1)"
+    },
+    {
+      "http.http_method": "DELETE",
+      "http.url": "category/wp-content",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "email-25.hudson.diaz.com",
+      "src_ip": "10.10.0.196",
+      "src_port": 53518,
+      "event_type": "http",
+      "timestamp": "2025-09-22T18:32:49",
+      "dest_ip": "190.166.35.209",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows CE; Trident/3.1)"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "count": 4,
+  "entries": [
+    {
+      "http.http_method": "GET",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.2.250",
+      "src_port": 55046,
+      "event_type": "http",
+      "timestamp": "2025-09-18T09:27:48",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10 5_8 rv:6.0; bem-ZM) AppleWebKit/535.9.4 (KHTML, like Gecko) Version/5.0.1 Safari/535.9.4"
+    },
+    {
+      "http.http_method": "POST",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.2.250",
+      "src_port": 52308,
+      "event_type": "http",
+      "timestamp": "2025-09-18T09:27:58",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10 5_8 rv:6.0; bem-ZM) AppleWebKit/535.9.4 (KHTML, like Gecko) Version/5.0.1 Safari/535.9.4"
+    },
+    {
+      "http.http_method": "TRACE",
+      "http.url": "posts",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "web-18.lara.com",
+      "src_ip": "10.10.2.250",
+      "src_port": 53339,
+      "event_type": "http",
+      "timestamp": "2025-09-19T12:26:49",
+      "dest_ip": "130.148.130.54",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10 5_8 rv:6.0; bem-ZM) AppleWebKit/535.9.4 (KHTML, like Gecko) Version/5.0.1 Safari/535.9.4"
+    },
+    {
+      "http.http_method": "HEAD",
+      "http.url": "wp-content/posts",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "laptop-34.moon-walsh.org",
+      "src_ip": "10.10.2.250",
+      "src_port": 62079,
+      "event_type": "http",
+      "timestamp": "2025-09-22T05:49:49",
+      "dest_ip": "187.185.171.123",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10 5_8 rv:6.0; bem-ZM) AppleWebKit/535.9.4 (KHTML, like Gecko) Version/5.0.1 Safari/535.9.4"
+    }
+  ]
+}

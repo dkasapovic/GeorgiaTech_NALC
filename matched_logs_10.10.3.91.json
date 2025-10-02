@@ -1,0 +1,61 @@
+{
+  "count": 4,
+  "entries": [
+    {
+      "http.http_method": "GET",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.3.91",
+      "src_port": 50291,
+      "event_type": "http",
+      "timestamp": "2025-09-18T10:24:28",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Windows; U; Windows NT 6.1) AppleWebKit/531.2.7 (KHTML, like Gecko) Version/5.0 Safari/531.2.7"
+    },
+    {
+      "http.http_method": "POST",
+      "http.url": "/login",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "srv-42.sanchez-brown.com",
+      "src_ip": "10.10.3.91",
+      "src_port": 53684,
+      "event_type": "http",
+      "timestamp": "2025-09-18T10:24:55",
+      "dest_ip": "122.249.102.194",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Windows; U; Windows NT 6.1) AppleWebKit/531.2.7 (KHTML, like Gecko) Version/5.0 Safari/531.2.7"
+    },
+    {
+      "http.http_method": "OPTIONS",
+      "http.url": "list",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "lt-29.moore.info",
+      "src_ip": "10.10.3.91",
+      "src_port": 59169,
+      "event_type": "http",
+      "timestamp": "2025-09-20T11:24:49",
+      "dest_ip": "222.224.165.18",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Windows; U; Windows NT 6.1) AppleWebKit/531.2.7 (KHTML, like Gecko) Version/5.0 Safari/531.2.7"
+    },
+    {
+      "http.http_method": "CONNECT",
+      "http.url": "list/search",
+      "http.protocol": "HTTP/1.1",
+      "http.hostname": "web-03.sullivan.savage.com",
+      "src_ip": "10.10.3.91",
+      "src_port": 59737,
+      "event_type": "http",
+      "timestamp": "2025-09-21T22:30:49",
+      "dest_ip": "175.225.22.127",
+      "proto": "TCP",
+      "dest_port": 80,
+      "http.http_user_agent": "Mozilla/5.0 (Windows; U; Windows NT 6.1) AppleWebKit/531.2.7 (KHTML, like Gecko) Version/5.0 Safari/531.2.7"
+    }
+  ]
+}
