@@ -1,63 +1,49 @@
 import json
 import re
+from collections import defaultdict
 
 log_file = "mail-2.log"
-target_text = "client=unknown[122.249.102.194]"
 output_file = "target_client.json"
-cmoses_text = "to=<cmoses@northamericanlumbercoalition.com>"
 cmoses_output = "cmoses_client.json"
+cmoses_text = "to=<cmoses@northamericanlumbercoalition.com>"
 
 with open(log_file, "r") as f:
     lines = f.readlines()
 
-results = []
-for i, line in enumerate(lines):
-    if target_text in line:
-        start = max(0, i - 3)
-        if i - start == 3:  # Ensure there are 4 lines
-            client_line = lines[start + 3].strip()
-            ip_match = re.search(r'\[(\d+\.\d+\.\d+\.\d+)\]', client_line)
-            ip = ip_match.group(1) if ip_match else None
-            from_line = lines[start].strip()
-            from_email_match = re.search(r'from=<([^>]+)>', from_line)
-            from_email = from_email_match.group(1) if from_email_match else None
-            timestamp_match = re.match(r'^(\w+ \d+ \d+:\d+:\d+)', from_line)
-            timestamp = timestamp_match.group(1) if timestamp_match else None
-            obj = {
-                "from": from_line,
-                "from_email": from_email,
-                "timestamp": timestamp,
-                "to": lines[start + 1].strip(),
-                "connected_from": lines[start + 2].strip(),
-                "client": client_line,
-                "ip": ip
-            }
-            results.append(obj)
+# Group lines by message ID
+msgid_pattern = re.compile(r'(\b[A-F0-9]{10,}\b):')
+msgid_lines = defaultdict(list)
+for line in lines:
+    match = msgid_pattern.search(line)
+    if match:
+        msgid = match.group(1)
+        msgid_lines[msgid].append(line.strip())
 
-cmoses_results = []
-for i, line in enumerate(lines):
-    if cmoses_text in line:
-        start = i
-        # Ensure indices are valid
-        if start - 1 >= 0 and start + 2 < len(lines):
-            from_line = lines[start - 1].strip()
-            from_email_match = re.search(r'from=<([^>]+)>', from_line)
-            from_email = from_email_match.group(1) if from_email_match else None
-            timestamp_match = re.match(r'^(\w+ \d+ \d+:\d+:\d+)', from_line)
-            timestamp = timestamp_match.group(1) if timestamp_match else None
-            connected_from_line = lines[start + 1].strip()
-            ip_match = re.search(r'\[(\d+\.\d+\.\d+\.\d+)\]', connected_from_line)
-            ip = ip_match.group(1) if ip_match else None
-            obj = {
-                "from": from_line,
-                "from_email": from_email,
-                "timestamp": timestamp,
-                "to": lines[start].strip(),
-                "connected_from": connected_from_line,
-                "client": lines[start + 2].strip(),
-                "ip": ip
-            }
-            cmoses_results.append(obj)
+results = []
+for msgid, group in msgid_lines.items():
+    obj = {"msgid": msgid}
+    # Extract from, to, client, ip, timestamp
+    for line in group:
+        if "from=<" in line:
+            obj["from"] = line
+            from_email_match = re.search(r'from=<([^>]+)>', line)
+            obj["from_email"] = from_email_match.group(1) if from_email_match else None
+            timestamp_match = re.match(r'^(\w+ \d+ \d+:\d+:\d+)', line)
+            obj["timestamp"] = timestamp_match.group(1) if timestamp_match else None
+        if "to=<" in line:
+            obj["to"] = line
+        if "client=unknown[" in line:
+            obj["client"] = line
+            ip_match = re.search(r'\[(\d+\.\d+\.\d+\.\d+)\]', line)
+            obj["ip"] = ip_match.group(1) if ip_match else None
+        if "connect from unknown[" in line:
+            obj["connected_from"] = line
+    # Only add if all required fields are present
+    if "from_email" in obj and "to" in obj and "client" in obj:
+        results.append(obj)
+
+# Filter for cmoses
+cmoses_results = [obj for obj in results if cmoses_text in obj.get("to", "")]
 
 with open(output_file, "w") as out:
     json.dump(results, out, indent=2)
